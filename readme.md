@@ -5,6 +5,8 @@ to use synthetically generated data for object detection.
 The ability to generate synthetic data creates new opportunities to include training data generation as 
 part of a closed-loop training process.
 
+The overarching goal of the project is to develop algorithms and methodologies to help improve synthetic data generation in order to improve model performance.
+
 # Task
 The task is to detect planes in satellite images. There are three level tasks, including:
 
