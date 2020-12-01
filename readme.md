@@ -10,9 +10,9 @@ The overarching goal of the project is to develop algorithms and methodologies t
 # Task
 The task is to detect planes in satellite images. There are three level tasks, including:
 
-1. detect whether there is a aircraft
-2. detect the role and the size of the aircraft: civil/military, small/medium/large 
-3. detect the plane type: airbus330, boeing7474 etc.
+1. detect whether there is an aircraft
+2. detect the role and the size of an aircraft: civil/military, small/medium/large 
+3. detect an aircraft type: airbus330, boeing7474 etc.
 
 We used faster-RCNN and mask-RCNN from facebook research [detectron2](https://github.com/facebookresearch/detectron2) for object detection.
 
