@@ -16,7 +16,7 @@ for both real and synthetic images;
 2. Get false predictions 
 from a pre-trained FasterRCNN (trained by real data) (see "FasterRCNN_inference.ipynb")
 3. Produce Feature Map, [Spatial Attention Map](https://arxiv.org/abs/1612.03928), Objectiveness Logits Map (see "localization.ipynb")
-4. [Deep Taylor Decomposition]()
+4. [Deep Taylor Decomposition](https://github.com/1202kbs/Understanding-NN/blob/master/2.4%20Deep%20Taylor%20Decomposition%20(1).ipynb)
     * Replace backbone params of Resnet50 using FasterRCNN's params, 
     and train the classification layer of Resnet50 while freezing its backbone (see "Resnet50_training.ipynb")
     * DTD inference using Resnet50 (see "DTD.ipynb" for demo, and "DTD_inference.ipynb" for complete procedures)
