@@ -30,6 +30,9 @@ such as deep taylor decomposition.
 
 We experimented with the following approaches:
 
-1. Matrix Decomposition Methods like PCA/NMF 
-2. Spatial Attention Map
-3. Deep Taylor Decomposition
+1. Latent Variable Models: 
+    - PCA
+    - NMF 
+2. Localization Algorithms:
+    - Spatial Attention Map
+    - Deep Taylor Decomposition
