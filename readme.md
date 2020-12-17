@@ -38,8 +38,5 @@ We experimented with the following approaches:
     - Deep Taylor Decomposition
     
 # Contributions
-This repo exists thanks to their contributions:
-
-Diwen Lu (dl3209@nyu.edu)
-
-Yuwei Wang (yw1854@nyu.edu)
+This repo exists thanks to our mentor [Lucy Wang](linkedin.com/in/lucy-wang-5a560525) (lucywang1189@gmail.com) and the team members:
+Diwen Lu (dl3209@nyu.edu), Yuwei Wang (yw1854@nyu.edu)
