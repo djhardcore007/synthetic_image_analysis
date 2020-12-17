@@ -57,5 +57,5 @@ As for localization algorithms, this repo built and trained models using [Google
  
     
 # Contributions
-This repo exists thanks to our mentor [Lucy Wang](linkedin.com/in/lucy-wang-5a560525) (lucywang1189@gmail.com) and the team members:
+This repo exists thanks to our mentor [Lucy Wang](linkedin.com/in/lucy-wang-5a560525) (lucywang1189@gmail.com) from [Rendered.AI](https://rendered.ai/) and the team members: Florence Jiang (florence.jiang@nyu.edu)
 Diwen Lu (dl3209@nyu.edu), Yuwei Wang (yw1854@nyu.edu)
