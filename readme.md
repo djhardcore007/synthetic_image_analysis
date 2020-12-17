@@ -36,3 +36,10 @@ We experimented with the following approaches:
 2. Localization Algorithms:
     - Spatial Attention Map
     - Deep Taylor Decomposition
+    
+# Contributions
+This repo exists thanks to their contributions:
+
+Diwen Lu (dl3209@nyu.edu)
+
+Yuwei Wang (yw1854@nyu.edu)
