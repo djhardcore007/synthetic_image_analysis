@@ -20,7 +20,7 @@
     - similarity search
     - outlier detection
     - hierarchical clustering
-    - ... definitely synthetic and real data analysis! 
+    - possible: synthetic and real data analysis! 
 
 # Xview data properties
 1. small bbox, low resolution
@@ -30,16 +30,19 @@
 
 # Key Take-aways
 
+This paper provides a possible latent variable model for us to experiment with, which is showed to have great generalization ability.
+We need access to their fine-tuned UFL model on the xview dataset.
+
 - When cropping bbox:
     - use square chips without reshaping which includes neighbor context information, which agrees to our previous methods;
     - more complex methods gave NO measurable benefits
     
 - Hidden space dim:
-    - 128 works fine, different values in feature dim do NOT offer significant benefits.
+    - 128 works fine. Different values in feature dim do NOT offer significant benefits.
     
 - Trick: employ random augmentation (flips, rotations, color gitter etc.) for better generalization ability.
 
-- Do not train the auto-encoder from scratch, use a pre-trained feature extracotr on ImageNet as baseline! 
+- Do not train the auto-encoder from scratch, use a pre-trained feature extractor on ImageNet as baseline! 
 
 - Try pretrained UFL using ResNet50 instead of auto-encoder in our work! 
 
