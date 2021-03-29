@@ -41,8 +41,8 @@ If we could observe some overlap between the real and synthetic feature maps in 
 
    The visualization folder contains the real and synthetic images level 2 to 6. Mapped from real to synthetic data and the other way around.
    
-   <img src="/Users/jiangdenglin/Documents/GitHub/synthetic_image_analysis/clustering/visualization/rareplane/3d_UMAP_p2 (Synthetic mapped to Real latent space).png" alt="3d_UMAP_p2 (Synthetic mapped to Real latent space)" style="zoom:30%;" />
-   <img src="/Users/jiangdenglin/Documents/GitHub/synthetic_image_analysis/clustering/visualization/rareplane/3d_UMAP_p2 (Real mapped to Synthetic latent space).png" alt="3d_UMAP_p2 (Real mapped to Synthetic latent space)" style="zoom:30%;" />
+   <img src="visualization/rareplane/3d_UMAP_p2 (Synthetic mapped to Real latent space).png" alt="3d_UMAP_p2 (Synthetic mapped to Real latent space)" style="zoom:30%;" />
+   <img src="visualization/rareplane/3d_UMAP_p2 (Real mapped to Synthetic latent space).png" alt="3d_UMAP_p2 (Real mapped to Synthetic latent space)" style="zoom:30%;" />
 
 
 
