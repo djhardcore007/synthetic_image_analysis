@@ -1,3 +1,8 @@
+'''
+Usage: !python3 predict_backbone.py --model_dir ... --output_dir ... --data_dir ...
+'''
+
+
 # Make sure you installed all necessary libs before running this script.
 # Setup detectron2 logger
 import detectron2
@@ -41,6 +46,7 @@ import torchvision.transforms as transforms
 from matplotlib.pyplot import imshow
 from PIL import Image
 import IPython
+import argparse
 
 
 def cv2_imshow(img):
@@ -84,16 +90,24 @@ def inference(data_syn, data_type, batch_size=1, img_size=512, output_dir='/cont
 
 
 if __name__ == '__main__':
-        
+    parser = argparse.ArgumentParser(description='Create UMAP visualization maps')
+    parser.add_argument('--output_dir', help='Output directory', default='/content/drive/MyDrive/111 Rendered.ai/xview/clustering/')
+    parser.add_argument('--data_dir', help='Data directory', default='/content/drive/MyDrive/111 Rendered.ai/xview/clustering/')
+    parser.add_argument('--model_dir', help='Data directory', default='/content/drive/My Drive/111 Rendered.ai/xview/detectron2_models/')
+    
+    args = parser.parse_args()
+    OUTPUT_DIR = args.output_dir 
+    DATA_DIR = args.data_dir
+    MODEL_DIR = args.model_dir
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed = 12345
     random.seed(seed)
     torch.manual_seed(seed)
 
     # Load data
-    OUTPUT_DIR = '/content/drive/MyDrive/111 Rendered.ai/xview/clustering/' # change your dir here
-    real_images = np.load(OUTPUT_DIR+'real_images.npy')
-    syn_images = np.load(OUTPUT_DIR+'syn_images.npy')
+    real_images = np.load(DATA_DIR+'real_images.npy')
+    syn_images = np.load(DATA_DIR+'syn_images.npy')
 
     # Normalize data
     data_real = normalize(real_images)
@@ -107,13 +121,12 @@ if __name__ == '__main__':
     # Load pretrained model
     model_weight_dir = 'model_final.pth'    # change your dir here
     yaml_dir = 'RCNN_Baseline.yaml'         # change your dir here
-    output_dir = '/content/drive/My Drive/111 Rendered.ai/xview/detectron2_models/'     # change your dir here
     cfg = get_cfg()
-    cfg.merge_from_file(output_dir+yaml_dir)
-    cfg.MODEL.WEIGHTS = output_dir+model_weight_dir
-    cfg.OUTPUT_DIR = output_dir
+    cfg.merge_from_file(MODEL_DIR+yaml_dir)
+    cfg.MODEL.WEIGHTS = MODEL_DIR+model_weight_dir
+    cfg.OUTPUT_DIR = MODEL_DIR
     model = build_model(cfg)  # returns a torch.nn.Module
-    checkpointer = DetectionCheckpointer(model).load(output_dir+model_weight_dir)  # load a file, usually from cfg.MODEL.WEIGHTS
+    checkpointer = DetectionCheckpointer(model).load(MODEL_DIR+model_weight_dir)  # load a file, usually from cfg.MODEL.WEIGHTS
 
     # Inference 
     model.eval()

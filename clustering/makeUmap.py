@@ -1,3 +1,8 @@
+'''
+Usage: !python3 makeUmap.py --n_samples 100 --output_dir ... --data_dir ...
+'''
+
+
 import glob
 from collections import defaultdict
 import numpy as np
