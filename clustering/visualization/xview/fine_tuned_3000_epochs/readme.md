@@ -2,7 +2,7 @@
 
 # Fine-tuned model results
 
-This is the xview visualization from fine-tuned model.
+This is the xview visualization from the fine-tuned model.
 
 ## Model Info 
 
