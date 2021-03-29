@@ -2,11 +2,11 @@
 
 This file contains the code and output of UMAP visualization.
 
-### What is the clustering file for? ###
+### What is the clustering folder for? ###
 
 The goal of clustering is to compare the synthetic and real data in the latent space.
 
-If we could observe some overlap between the real and synthetic feature maps in the latent space, we might conclude that the synthetic data shares the same underlying distribution as the real data.
+If we could observe some overlap between the real and synthetic feature maps in the latent space, we might conclude that the synthetic data shares the same underlying distribution as the real data. In general, the more overlap, the better.
 
 ### UMAP Pipeline ###
 
@@ -64,7 +64,8 @@ print(torch.__version__, torch.cuda.is_available())
 !pip install hdbscan
 ```
 
-Then sample 100 images from both real and synthetic data.
+Then, sample 100 images from both real and synthetic data. Crop images. 
+Store them in data_dir as 'real_images.npy' and 'syn_images.npy'. Make sure np arr shape = (100, 512, 512 ,3).
 
 Finally, run the script.
 
