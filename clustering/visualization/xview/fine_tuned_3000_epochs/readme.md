@@ -1,6 +1,8 @@
 
 
-# UMAP visualization on Xview Data
+# Fine-tuned model results
+
+This is the xview visualization from fine-tuned model.
 
 ## Model Info 
 

@@ -1,6 +1,6 @@
+# Pretrained model results
 
-
-# UMAP visualization on Xview Data
+This is the xview visualization from pretrained model.
 
 ## Model Info 
 
