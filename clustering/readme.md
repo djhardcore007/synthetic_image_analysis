@@ -11,7 +11,9 @@ If we could observe some overlap between the real and synthetic feature maps in 
 ### UMAP Pipeline ###
 
 1. Sample 100 synthetic and real images each from full datasets.
+
 2. Crop real images into (512, 512, 3) such that synthetic images and real images are of the same size. Now syn or real data shape is (100, 512, 512, 3)
+
 3. Use the backbone of a pretrained detectron2 model (we get this pretrained model from our customers) to get feature maps for 5 different Feauture Pyramid Networks.
 	- p2 (100, 16384) for only real or synthetic data
 	- p3 (100, 4096)
@@ -27,6 +29,7 @@ If we could observe some overlap between the real and synthetic feature maps in 
 	- p4 (200, 1024)
 	- p5 (200, 256)
 	- p6 (200, 64)
+	
 5. Use UMAP to reduce feautres. We fit a UMAP model using only real data (synthetic data), and then transform the real data (synthetic data) using that model. Intuitively, we have mapped the synehtic data (real data) onto a latent space of real data (synthetic data).
 	- p2 (200, 16384) 	--> (200,3)
 	- p3 (200, 4096)	--> (200,3)
@@ -35,6 +38,16 @@ If we could observe some overlap between the real and synthetic feature maps in 
 	- p6 (200, 64)		--> (200,3)
 	
 6. Visualization using 3D scatter plot.
+
+   The visualization folder contains the real and synthetic images level 2 to 6. Mapped from real to synthetic data and the other way around.
+   
+   <img src="/Users/jiangdenglin/Documents/GitHub/synthetic_image_analysis/clustering/visualization/rareplane/3d_UMAP_p2 (Synthetic mapped to Real latent space).png" alt="3d_UMAP_p2 (Synthetic mapped to Real latent space)" style="zoom:30%;" />
+   <img src="/Users/jiangdenglin/Documents/GitHub/synthetic_image_analysis/clustering/visualization/rareplane/3d_UMAP_p2 (Real mapped to Synthetic latent space).png" alt="3d_UMAP_p2 (Real mapped to Synthetic latent space)" style="zoom:30%;" />
+
+
+
+
+
 
 
 ### Deployment instructions ###
