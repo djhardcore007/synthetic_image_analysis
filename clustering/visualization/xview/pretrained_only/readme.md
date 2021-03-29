@@ -34,6 +34,18 @@ See the Per-category bbox AP  **on crane_look_angle_plus.003** below.
 | APm                         | 2.38  |
 | Ap1                         | nan   |
 
+Distribution of test instances from 2000 images among all 4 categories:
+
+| category     | #instances |
+| ------------ | ---------- |
+| Crane truck  | 1038       |
+| Tower crane  | 757        |
+| Mobile crane | 3798       |
+| Distractors  | 0          |
+| Total        | 5593       |
+
+
+
 ## Data Info
 
 | Data type | Description                             | Shape                                |
