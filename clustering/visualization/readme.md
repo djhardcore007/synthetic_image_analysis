@@ -2,21 +2,39 @@
 
 In this folder, I listed UMAP visualization results for both Rareplan and Xview data.
 
+### What is the UMAP Pipeline? ###
 
+1. Sample 100 synthetic and real images each from full datasets.
 
-### Rareplane
+2. Crop real images into (512, 512, 3) such that synthetic images and real images are of the same size. Now syn or real data shape is (100, 512, 512, 3)
 
-Rareplane model is from [AIreveries Rareplane pretained FasterRCNN on real data](https://github.com/aireveries/RarePlanes/tree/master/models) 
+3. Use the backbone of a pretrained detectron2 model (we get this pretrained model from our customers) to get feature maps for 5 different Feauture Pyramid Networks.
 
-*Note that this model is a civil role model.*
+   - p2 (100, 16384) for only real or synthetic data
+   - p3 (100, 4096)
+   - p4 (100, 1024)
+   - p5 (100, 256)
+   - p6 (100, 64)
 
+   The output is saved in '.npy files'
 
+4. For each pyramid level, we vertically stack the real and synthetic data to get the following shape:
 
-**Model performance:** 
+   - p2 (200, 16384) for both real and synthetic data
+   - p3 (200, 4096)
+   - p4 (200, 1024)
+   - p5 (200, 256)
+   - p6 (200, 64)
 
-Boxed AP on **real** data = 68.21%
+5. Use UMAP to reduce feautres. We fit a UMAP model using only real data (synthetic data), and then transform the real data (synthetic data) using that model. Intuitively, we have mapped the synehtic data (real data) onto a latent space of real data (synthetic data).
 
-Boxed AP on **synthetic** data = 35.88%
+   - p2 (200, 16384) 	--> (200,3)
+   - p3 (200, 4096)	--> (200,3)
+   - p4 (200, 1024)	--> (200,3)
+   - p5 (200, 256)		--> (200,3)
+   - p6 (200, 64)		--> (200,3)
+
+6. Visualization using 3D scatter plot.
 
 
 
