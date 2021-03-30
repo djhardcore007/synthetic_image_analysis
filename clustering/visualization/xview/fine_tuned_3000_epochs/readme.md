@@ -10,7 +10,7 @@ This is the xview visualization from the fine-tuned model.
 
 **Model Labels**: Crane Truck, Mobile Crane, Tower Crane, Distractor 
 
-**Pretrained**: Yes. using Real Rareplane data
+**Pretrained**: Yes.
 
 **Pretrained Model Source**: Customer
 
